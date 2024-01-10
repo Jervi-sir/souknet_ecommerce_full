@@ -1,5 +1,13 @@
 RewriteEngine on
 
+# CORS Headers
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Methods "POST, GET, OPTIONS, PUT, DELETE"
+    Header set Access-Control-Allow-Headers "Content-Type, Accept, Authorization, X-Requested-With, Application"
+</IfModule>
+
+
 # Redirect Trailing Slashes If Not A Folder...
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_URI} (.+)/$

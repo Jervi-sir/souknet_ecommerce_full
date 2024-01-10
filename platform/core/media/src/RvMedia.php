@@ -142,7 +142,6 @@ class RvMedia
 
     public function getImageUrl(?string $url, $size = null, bool $relativePath = false, $default = null)
     {
-        //return 'https://martfury.botble.com/storage/' . $this->url($url);
         
         if (empty($url)) {
             return $default;
