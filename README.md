@@ -13,3 +13,5 @@ https://nullcave.club/dl/martfury-multivendor-marketplace-laravel-ecommerce-syst
 its  a fully functional General Multipurpose store, with Admin, store panel, and payment, 
 <br>
 it feels like installing wordpress so
+<br>
+backup is hosted in gacembekhira@gmail.com drive
