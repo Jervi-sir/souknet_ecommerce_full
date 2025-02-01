@@ -14,6 +14,7 @@
                             <div class="ps-banner bg--cover">
                                 @php
                                     $img = RvMedia::getImageUrl($slider->image, null, false, RvMedia::getDefaultImage());
+                                    $img = Str::replaceFirst('http://', 'https://', $img);
                                     $tabletImage = $slider->getMetaData('tablet_image', true) ?: $img;
                                     $mobileImage = $slider->getMetaData('mobile_image', true) ?: $tabletImage;
                                 @endphp

@@ -190,8 +190,13 @@ class RvMedia
     {
         $path = trim($path);
 
-        if (Str::contains($path, 'https://') || Str::contains($path, 'http://')) {
+        if (Str::startsWith($path, 'https://')) {
             return $path;
+        }
+    
+        // Forcing HTTPS when the path starts with 'http://'
+        if (Str::startsWith($path, 'http://')) {
+            return Str::replaceFirst('http://', 'https://', $path);
         }
 
         if (config('filesystems.default') === 'do_spaces' && (int)setting('media_do_spaces_cdn_enabled')) {
